@@ -1,1 +1,6 @@
-<p>space works!</p>
+<mat-form-field>
+    <mat-label>Total Space</mat-label>
+    <input matInput [(ngModel)]="total_space">
+</mat-form-field>
+<button mat-raised-button (click)="addSpace()" [disabled]="total_space <= accSpace">Add Space</button>
+<app-space-view [data]="space"></app-space-view>

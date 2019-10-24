@@ -1,0 +1,30 @@
+<div mat-dialog-content>
+    <form [formGroup]="formGroup" class="form">
+        <mat-form-field appearance="outline" class="form-element">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title">
+            <mat-error *ngIf="formGroup.controls['title'].invalid && formGroup.controls['title'].touched">
+                The title is required
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-element">
+            <mat-label>Price</mat-label>
+            <input matInput formControlName="price">
+            <mat-error *ngIf="formGroup.controls['price'].invalid && formGroup.controls['price'].touched">
+                The price is required
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-element">
+            <mat-label>space_amount</mat-label>
+            <input matInput formControlName="space_amount">
+            <mat-error *ngIf="formGroup.controls['space_amount'].invalid && formGroup.controls['space_amount'].touched">
+                The space is required
+            </mat-error>
+        </mat-form-field>
+    </form>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="formGroup.value" cdkFocusInitial>Ok</button>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+    <mat-card (click)="clicked(item)" class="card" *ngFor="let item of data" [ngClass]="(item.availibility === false) ? 'red': 'green'">
+        <mat-card-header>
+            <mat-card-title>{{ item.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="item.space_image" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>Price: {{ item.price }}</p>
+            <p>Space: {{ item.space_amount }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
