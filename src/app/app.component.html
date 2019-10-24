@@ -1,10 +1,8 @@
 <mat-toolbar class="topnav" color="warn">
   <h1>Vehicle Parking App</h1>
   <div class="menu">
-    <a mat-button [routerLink]="'/accounts'"> Space </a>
-    <a mat-button [routerLink]="'/create-account'"> Vehicle Booking </a>
-  </div>
-  <div>
-
+    <a mat-button [routerLink]="'/space'"> Space </a>
+    <a mat-button [routerLink]="'/book'"> Vehicle Booking </a>
   </div>
 </mat-toolbar>
+<router-outlet></router-outlet>
